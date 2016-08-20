@@ -1,28 +1,19 @@
 #include <stdio.h>
 
 /*
-Static variable - keep the value assigned to variable while program runs
+Arrays
 */
 
-void f(void) {
-  int a = 0;
-  a++;
-  printf("a: %d\n", a);
-}
-
-void g(void) {
-  static int b = 0; /* static variable */
-  b++;
-  printf("b: %d\n", b);
-}
-
 int main(void) {
-  f(); /* a: 1 */
-  f(); /* a: 1 */
-  f(); /* a: 1 */
+  int sales[3]; /* specify size */
+  sales[0] = 200;
+  sales[1] = 400;
+  sales[2] = 300;
 
-  g(); /* b: 1 */
-  g(); /* b: 2 */
-  g(); /* b: 3 */
+  /* same thing as above, you can omit size of array in [] */
+  int sales2[] = {200, 400, 300};
+
+  printf("%d\n", sales[1]);
+  printf("%d\n", sales2[1]);
   return 0;
 }
