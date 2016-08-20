@@ -1,23 +1,23 @@
 #include <stdio.h>
 
 /*
-While Loop
+For Loop
 
-while - check conditions before
-do while - check conditions after
+continue; - skip once
+break; - exit loop
 */
 int main(void) {
-  int m = 0;
-  while (m < 10) {
-    printf("m: %d\n", m);
-    m++;
-  }
 
-  int n = 0;
-  do {
-    printf("n: %d\n", n);
-    n++;
-  } while (n < 10);
+  int m;
+  for (m = 0; m < 10; m++) {
+    if (m == 3) {
+      continue;
+    }
+    if (m == 8) {
+      break;
+    }
+    printf("m: %d\n", m);
+  }
 
   return 0;
 }
