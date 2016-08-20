@@ -1,26 +1,24 @@
 #include <stdio.h>
 
 /*
-Operators
-  - add +
-  - subtract -
-  - multiple *
-  - division /
-  - modulo %
-
-Assignment + Operators
-  x = x + 5; -> x += 5;
-
-Unary operator
-  ++, --
+If conditional
+  - greater than or equal to >=
+  - less than or equal to <=
+  - grater than >
+  - less than <
+  - equal ==
+  - not equal !=
 */
 int main(void) {
+  int score = 80;
 
-  int x;
-  x = 10 % 3; /* 1 */
-  x += 3; /* 4 */
-  x++; /* 5 */
+  if (score >= 60) {
+    printf("ok!\n");
+  } else if (score >= 50) {
+    printf("so so ...\n");
+  } else {
+    printf("ng!\n");
+  }
 
-  printf("x = %d\n", x);
   return 0;
 }
