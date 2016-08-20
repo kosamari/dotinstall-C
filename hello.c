@@ -1,26 +1,23 @@
 #include <stdio.h>
 
 /*
-Switch Statement
-don't forget to write `break;` to end case
+While Loop
+
+while - check conditions before
+do while - check conditions after
 */
 int main(void) {
-  int rank = 2;
-
-  switch(rank) {
-    case 1:
-      printf("Gold\n");
-      break;
-    case 2:
-      printf("Silver\n");
-      break;
-    case 3:
-      printf("Bronze\n");
-      break;
-    default:
-      printf("no medal...\n");
-      break;
+  int m = 0;
+  while (m < 10) {
+    printf("m: %d\n", m);
+    m++;
   }
+
+  int n = 0;
+  do {
+    printf("n: %d\n", n);
+    n++;
+  } while (n < 10);
 
   return 0;
 }
