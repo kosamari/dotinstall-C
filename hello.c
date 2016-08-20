@@ -1,23 +1,25 @@
 #include <stdio.h>
 
 /*
-If conditional
-  - greater than or equal to >=
-  - less than or equal to <=
-  - grater than >
-  - less than <
-  - equal ==
-  - not equal !=
+Switch Statement
+don't forget to write `break;` to end case
 */
 int main(void) {
-  int score = 80;
+  int rank = 2;
 
-  if (score >= 60) {
-    printf("ok!\n");
-  } else if (score >= 50) {
-    printf("so so ...\n");
-  } else {
-    printf("ng!\n");
+  switch(rank) {
+    case 1:
+      printf("Gold\n");
+      break;
+    case 2:
+      printf("Silver\n");
+      break;
+    case 3:
+      printf("Bronze\n");
+      break;
+    default:
+      printf("no medal...\n");
+      break;
   }
 
   return 0;
