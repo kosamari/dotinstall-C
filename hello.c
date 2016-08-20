@@ -1,34 +1,28 @@
 #include <stdio.h>
 
 /*
-Ternary operator
- -　if/else in one line
+Local variable - only active within the block declared
 
-if (condition) {
-  return A;
-} else {
-  return B;
+Global variable - available from all block
+*/
+
+int b = 1;
+
+void f(void) {
+  int a = 0;
+  a++;
+  printf("a: %d\n", a);
 }
 
-==
-
-value = (condition) ? A : B;
-*/
-
-float getMax(float a, float b) {
-/*
-  if (a >= b) {
-    return a;
-  } else {
-    return b;
-  }
-*/
-  return (a >= b) ? a : b;
+void g(void) {
+  b++;
+  printf("b: %d\n", b);
 }
 
 int main(void) {
-  float result;
-  result = getMax(2.3, 5.2);
-  printf("%f\n", result);
+  f();
+  /*printf("[main] a: %d\n", a) => compile error*/
+  printf("[main] b: %d\n", b);
+  g();
   return 0;
 }
