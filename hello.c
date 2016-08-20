@@ -1,23 +1,30 @@
 #include <stdio.h>
 
 /*
-For Loop
+Function
+ - combine multiple task in one name
 
-continue; - skip once
-break; - exit loop
+how to write function:
+[return type] [function name] ([argument type][argument name], ...) {
+    do operation;
+    return [return value];
+}
+
+how call function:
+[function name]([argument], ...)
 */
-int main(void) {
 
-  int m;
-  for (m = 0; m < 10; m++) {
-    if (m == 3) {
-      continue;
-    }
-    if (m == 8) {
-      break;
-    }
-    printf("m: %d\n", m);
+float getMax(float a, float b) {
+  if (a >= b) {
+    return a;
+  } else {
+    return b;
   }
+}
 
+int main(void) {
+  float result;
+  result = getMax(2.3, 5.2);
+  printf("%f\n", result);
   return 0;
 }
