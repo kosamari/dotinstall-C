@@ -1,25 +1,23 @@
 #include <stdio.h>
 
 /*
-Save memory with pointer!
+Things you can do only with Pointer
 
-new type
-large integer : long() %ld
-takes 8 memory addresses
-
-the following code used 16 memory addresses
-
-Pointer variable only takes 4 memory addresses
+Function in C returns only one value, if you want to swap value of a and b
+how do access 2 values after you call swap function?
 */
 
-void f(long *pa) { /* create pointer from memory address 9-12 */
-  *pa += 100; /* 1. access memory address 1-8 - pointed by pointer variable.
-                 2. add 100 to the value saved in address 1-8 */
-  printf("%ld\n", *pa);
+void swap(int *pa, int *pb) {
+  int tmp; /* create temporary value */
+  tmp = *pa; /* copy value of a to temp */
+  *pa = *pb; /* overwrite value of a with value of b */
+  *pb = tmp; /* overwrite value of b with valeu of temp which was copy of value a */
 }
 
 int main(void) {
-  long a = 1000; /* add 1000 in memory address 1-8 */
-  f(&a); /* pass address of a to function f */
+  int a = 5;
+  int b = 10;
+  swap(&a, &b);
+  printf("a:%d, b:%d\n", a, b);
   return 0;
 }
