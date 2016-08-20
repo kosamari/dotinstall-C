@@ -17,4 +17,4 @@ run executable file
 ```
 
 ## misc
-If you understand Japanese, dotinstall.com is a fantastic site to get gasp of many programing languages and frameworks in few hours.
+If you understand Japanese, [ドットインストール](http://dotinstall.com) is a fantastic site to get grasp of many programing languages and frameworks in few hours.
