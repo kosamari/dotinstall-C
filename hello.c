@@ -1,21 +1,22 @@
 #include <stdio.h>
 
 /*
-Pointer : variable to store address in memory
+Save memory with pointer!
 
-int takes memory of 4 addresses
+new type
+large integer : long() %ld
+takes 8 memory addresses
 
-use * to create pointer
-& : address operator
-* : indirection operator (get value from the address which pointer variable is pointing to)
+the following code used 16 memory addresses
 */
 
-int main(void) {
-  int a; /* naming 4 addresses as a */
-  a = 10;/* keep value 10 in the address named a */
+void f(long a) {
+  a += 100; /* copy 1000 in memory address 9-16, then add 100 */
+  printf("%ld\n", a);
+}
 
-  int *pa; /* use * to create pointer */
-  pa = &a; /* point to address of variable a*/
-  printf("%d\n", *pa); /* get variable from the memory address where pointer variable is pointing to*/
+int main(void) {
+  long a = 1000; /* add 1000 in memory address 1-8 */
+  f(a);
   return 0;
 }
