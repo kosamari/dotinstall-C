@@ -1,12 +1,8 @@
 #include <stdio.h>
 
 /*
-Local variable - only active within the block declared
-
-Global variable - available from all block
+Static variable - keep the value assigned to variable while program runs
 */
-
-int b = 1;
 
 void f(void) {
   int a = 0;
@@ -15,14 +11,18 @@ void f(void) {
 }
 
 void g(void) {
+  static int b = 0; /* static variable */
   b++;
   printf("b: %d\n", b);
 }
 
 int main(void) {
-  f();
-  /*printf("[main] a: %d\n", a) => compile error*/
-  printf("[main] b: %d\n", b);
-  g();
+  f(); /* a: 1 */
+  f(); /* a: 1 */
+  f(); /* a: 1 */
+
+  g(); /* b: 1 */
+  g(); /* b: 2 */
+  g(); /* b: 3 */
   return 0;
 }
