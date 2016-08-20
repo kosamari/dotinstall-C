@@ -1,19 +1,13 @@
 #include <stdio.h>
 
 /*
-String
+Pointer : variable to store address in memory
 
-string s; => doesn't exist in C
-in C string is Array of char type (always end with \0)
-
-These 3 ways do the same thing
-char s[] = {'a', 'b', 'c', '\0'};
-char s[] = "abc";
-char s[4] = "abc"; if you specify length of an array, don't forget there is '\0' at the end
+int takes memory of 4 addresses
 */
 
 int main(void) {
-  char s[] = "abc";
-  printf("%c\n", s[1]); /* b */
+  int a; /* naming 4 addresses as a */
+  a = 10;/* keep value 10 in the address named a */
   return 0;
 }
